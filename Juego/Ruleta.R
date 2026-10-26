@@ -1,15 +1,3 @@
-
-# Parámetros y estado de la simulación
-capital_inicial <- 3
-capital <- capital_inicial
-apuesta_maxima <- 64
-n_tiradas_dia <- 100
-
-tiradas_realizadas <- 0
-ganancia_neta <- 0
-apuestas_realizadas <- c()
-apostado <- 1
-
 reiniciar_simulacion <- function(C = 50, m = 64, n = 100) {
   capital_inicial <<- C
   capital <<- C
@@ -43,14 +31,6 @@ apostar <- function(fichas) {
 
     return(FALSE)
   }
-}
-
-suficientes_fichas <- function() {
-  if (apostado > apuesta_maxima) {
-    apostado <<- 1
-  }
-  
-  return(capital >= apostado && capital > 0)
 }
 
 sesion <- function() {

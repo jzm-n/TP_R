@@ -25,32 +25,3 @@ test_apuesta_maxima <- function(resultado, m) {
   all(resultado$apuestas_realizadas <= m)
 }
 
-#Casos de prueba para actividad 2
-# Prueba una estrategia con simulaciones cortas
-test_estrategia <- function(estrategia, C, m, n) {
-  
-  resultados <- simular_repeticiones(
-    estrategia,
-    nRep = 1000,
-    C = C,
-    m = m,
-    n = n
-  )
-  
-  resumen <- resultados$resumen
-  apuestas <- resultados$apuestas
-  
-  # Verificar resultados
-  stopifnot(
-    all(resumen$capital_final == C + resumen$ganancia_neta),
-    all(resumen$tiradas_realizadas <= n),
-    all(resumen$tiradas_realizadas == lengths(apuestas)),
-    all(vapply(apuestas, function(x) all(x > 0), logical(1))),
-    all(vapply(apuestas, function(x) all(x <= m), logical(1)))
-  )
-  
-  print("Todas las pruebas pasaron.")
-  
-  return(resultados)
-}
-

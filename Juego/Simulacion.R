@@ -1,4 +1,4 @@
-
+#ejecuta nrep veces la estrategia
 simular_repeticiones <- function(estrategia, nRep, C, m, n) {
   
   resultados <- vector("list", nRep)
@@ -8,7 +8,7 @@ simular_repeticiones <- function(estrategia, nRep, C, m, n) {
     reiniciar_simulacion(C, m, n)
     resultados[[i]] <- estrategia()
   }
-  
+  #dibuja un cuadro haciendo filas con los resultados
   resumen <- data.frame(
     dia = 1:nRep,
     capital_final = sapply(resultados, function(x) x$capital_final),
