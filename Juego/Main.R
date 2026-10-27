@@ -5,6 +5,11 @@ source("Estrategia_3.R")
 source("Pruebas.R")
 source("Simulacion.R")
 
+# ANTES DE PROBAR CUALQUIER CÓDIGO DE ESTE PROYECTO
+# ASEGURARSE DE TENER CONFIGURADO CORRECTAMENTE EL ESPACIO DE TRABAJO PARA LA SESIÓN
+# DESDE LA INTERFAZ DE RSTUDIO:
+#   BARRA SUPERIOR -> SESSION -> SET WORKING DIRECTORY -> TO SOURCE FILE LOCATION
+
 # ==========================================
 # ACTIVIDAD 2: pruebas con valores pequeños
 # ==========================================
