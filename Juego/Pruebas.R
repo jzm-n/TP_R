@@ -25,3 +25,9 @@ test_apuesta_maxima <- function(resultado, m) {
   all(resultado$apuestas_realizadas <= m)
 }
 
+"test_capital_ganancia(resultado_e2, 50)
+test_cantidad_tiradas(resultado_e2)
+test_maximo_tiradas(resultado_e2, 100)
+test_apuestas_positivas(resultado_e2)
+test_apuesta_maxima(resultado_e2, 64)"
+
